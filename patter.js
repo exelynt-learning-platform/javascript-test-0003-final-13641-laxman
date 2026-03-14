@@ -1,14 +1,31 @@
-let initialNumber=0;
-for(let i=1; i<=6; i++){
-    for(let j=1; j<=i; j++){
-        if(initialNumber==1){
-            document.write("0")
-            initialNumber=0
-        } else{
-            document.write("1")
-            initialNumber=1
-        }
-        // document.write(j)
+
+let rows = 6;
+
+
+for (let i = 1; i <= rows; i++) {
+    
+    let line = "";
+
+    let value;
+    if (i % 2 === 1) {
+        value = 1;
+    } else {
+        value = 0;
     }
-    document.writeln("<br>")
+
+    
+    for (let j = 1; j <= i; j++) {
+        
+        line += value + " ";
+
+        
+        if (value === 1) {
+            value = 0;
+        } else {
+            value = 1;
+        }
+    }
+
+    
+    console.log(line);
 }
